@@ -10,7 +10,7 @@ class TwitterMessage extends React.Component {
       char: " "
     };
   }
- 
+
 
   handleMaxChar = event => {
     console.log(event.target.value)
@@ -26,12 +26,13 @@ class TwitterMessage extends React.Component {
   // }
 
   render() {
+
     return (
       <div>
         <strong>Your message:</strong>
         <input type="text" name="message" id="message" onChange={event => this.handleMaxChar(event)} value={this.state.char} />
         <p>You have got {this.props.maxChars - this.state.char.length} characters remaining. </p>
-        
+
       </div>
     );
   }
